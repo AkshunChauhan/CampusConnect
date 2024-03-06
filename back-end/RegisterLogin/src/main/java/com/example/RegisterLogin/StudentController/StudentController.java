@@ -15,15 +15,17 @@ public class StudentController {
 
     @Autowired
     private StudentService studentService; // Correctly autowire StudentService
-
+    //Endpoint for student signup
     @PostMapping(path = "/save")
     public String saveStudent(@RequestBody StudentDTO studentDTO) {
         String id = studentService.addStudent(studentDTO); // Correct method name for saving a student
         return id;
     }
 
+    //Endpoint for student login
     @PostMapping(path = "/login")
     public ResponseEntity<?> loginStudent(@RequestBody LoginDTO loginDTO) {
+        // Correct method name for student login
         LoginResponse loginResponse = studentService.loginStudent(loginDTO); // Correct method name for student login
         return ResponseEntity.ok(loginResponse);
     }

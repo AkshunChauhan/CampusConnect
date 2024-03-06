@@ -112,4 +112,22 @@
     font-size: 14px;
     margin-top: 10px;
   }
-  
+  /* Heading styles */
+h1, h2, h3 {
+  text-align: center;
+  color: #333; /* Dark grey color */
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem; /* Larger font size for the main heading */
+}
+
+h2 {
+  font-size: 2rem; /* Font size for the secondary heading */
+}
+
+h3 {
+  font-size: 1.5rem; /* Font size for the slogan */
+  font-style: italic; /* Italic style for the slogan */
+}
