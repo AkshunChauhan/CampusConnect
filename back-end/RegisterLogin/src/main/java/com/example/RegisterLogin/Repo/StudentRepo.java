@@ -6,12 +6,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
-
+// Repository interface for managing Student entities
 @EnableJpaRepositories
 @Repository
-public interface StudentRepo extends JpaRepository<Student, Integer> { // Change repository name and entity type
-
-    Optional<Student> findOneByEmailAndPassword(String email, String password); // Update method signature to use Student
-
-    Student findByEmail(String email); // Update method signature to use Student
+public interface StudentRepo extends JpaRepository<Student, Integer> {
+    // Method to find a student by email and password
+    Optional<Student> findOneByEmailAndPassword(String email, String password);
+    // Method to find a student by email
+    Student findByEmail(String email);
 }

@@ -8,8 +8,8 @@ public class LoginDTO {
     public LoginDTO(String email, String password) {
         this.email = email;
         this.password = password;
-    } //create getters and setters
-
+    }
+//getters and setters
     public LoginDTO(){
     }
     public String getEmail(){

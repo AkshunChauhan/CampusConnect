@@ -20,25 +20,25 @@ public class StudentIMPL implements StudentService { // Change the service imple
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-
+    // Method to add a new student
     @Override
-    public String addStudent(StudentDTO studentDTO) { // Change method signature to use StudentDTO
+    public String addStudent(StudentDTO studentDTO) {
         Student student = new Student(
-                studentDTO.getStudentId(), // Update to use studentId from StudentDTO
-                studentDTO.getStudentName(), // Update to use studentName from StudentDTO
+                studentDTO.getStudentId(),
+                studentDTO.getStudentName(),
                 studentDTO.getEmail(),
                 this.passwordEncoder.encode(studentDTO.getPassword()) // Use password encoder
         );
 
         studentRepo.save(student);
 
-        return student.getStudentName(); // Update return statement to get student name
+        return student.getStudentName();
     }
-
+    // Method to authenticate student login
     @Override
     public LoginResponse loginStudent(LoginDTO loginDTO) {
         String msg = "";
-        Student student = studentRepo.findByEmail(loginDTO.getEmail()); // Update to use StudentRepo
+        Student student = studentRepo.findByEmail(loginDTO.getEmail());
         if (student != null) {
             String password = loginDTO.getPassword();
             String encodedPassword = student.getPassword();

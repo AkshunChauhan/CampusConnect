@@ -1,5 +1,5 @@
 package com.example.RegisterLogin.Dto;
-
+// Data Transfer Object (DTO) representing a student
 public class StudentDTO {
 
     private int studentId;
@@ -9,7 +9,7 @@ public class StudentDTO {
 
     public StudentDTO() {
     }
-
+    //Constructor with parameters
     public StudentDTO(int studentId, String studentName, String email, String password) {
         this.studentId = studentId;
         this.studentName = studentName;
@@ -48,7 +48,7 @@ public class StudentDTO {
     public void setStudentName(String studentName) {
         this.studentName = studentName;
     }
-
+    // Override toString method to provide a string representation of the StudentDTO object
     @Override
     public String toString() {
         return "StudentDTO{" +
