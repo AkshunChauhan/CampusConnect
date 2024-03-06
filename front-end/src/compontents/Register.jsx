@@ -12,7 +12,7 @@ function Register() {
     async function save(event) {
         event.preventDefault();
         try {
-          await axios.post("http://localhost:4000/api/v1/employee/save", {
+          await axios.post("http://localhost:4000/api/v1/student/save", {
           employeename: employeename,
           email: email,
           password: password,

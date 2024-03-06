@@ -14,7 +14,7 @@ function Login() {
     async function login(event) {
         event.preventDefault();
         try {
-          await axios.post("http://localhost:4000/api/v1/employee/login", {
+          await axios.post("http://localhost:4000/api/v1/student/login", {
             email: email,
             password: password,
             }).then((res) => 
