@@ -34,9 +34,10 @@ function Login() {
     return (
         <div>
             <div className="container">
-                <div className="row">
+            <div className="row">
+                    <h1>Campus Connect</h1>
+                    <h3>Social Media Platform for College Students</h3>
                     <h2>Login</h2>
-                    <hr />
                 </div>
 
                 <div className="row">

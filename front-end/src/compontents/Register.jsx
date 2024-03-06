@@ -63,8 +63,12 @@ function Register() {
     return (
         <div>
             <div className="container mt-4">
+            <div className="row">
+                    <h1>Campus Connect</h1>
+                    <h3>Social Media Platform for College Students</h3>
+                </div>
                 <div className="card">
-                    <h1>Student Registration</h1>
+                    <h2>Student Registration</h2>
                     <form onSubmit={save}>
                         <div className="form-group">
                             <label htmlFor="studentName">Student Name</label>
