@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+/* File Upload Container */
+.file-upload-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* File Upload Form */
+.file-upload-form {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* File Input */
+.file-input {
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* File Label */
+.file-label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.file-label:hover {
+  text-decoration: underline;
+}
+
+/* Upload Button */
+.upload-button {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message */
+.error-message {
+  color: #dc3545;
+  margin-top: 10px;
+}
+
+/* Shared Files List */
+.shared-files {
+  list-style: none;
+  padding: 0;
+}
+
+/* Shared File Item */
+.shared-file-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.shared-file-item .file-icon {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shared-file-item .file-name {
+  color: #333;
+}
+
+/* File Icon (You may use actual icons or font awesome) */
+.file-icon::before {
+  content: '\1F4C4'; /* Example icon */
+  font-size: 20px;
 }

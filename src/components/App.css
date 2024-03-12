@@ -1,0 +1,54 @@
+/* App.css */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #555;
+}
+
+.file-upload-container {
+  margin-bottom: 20px;
+}
+
+.file-upload-container input[type="file"] {
+  display: none;
+}
+
+.file-upload-container label {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-container label:hover {
+  background-color: #0056b3;
+}
+
+.file-upload-container p {
+  color: red;
+}
+
+.file-list-container {
+  margin-top: 20px;
+}
+
+.file-list-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.file-list-container ul li {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
