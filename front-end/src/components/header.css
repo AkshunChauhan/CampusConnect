@@ -1,0 +1,44 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Change the background color as needed */
+    padding: 10px 0; /* Adjust padding as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for a nice effect */
+    z-index: 1000; /* Ensure the header stays above other elements */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the navigation horizontally */
+    padding: 0 20px; /* Adjust padding as needed */
+  }
+  
+  .nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-right: 10px;
+    align-items: right; /* Adjust margin between navigation items */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff; /* Change the color of the links */
+  }
+  
+  /* Add boundaries around the header */
+  .header {
+    border-bottom: 1px solid #ddd; /* Add border at the bottom */
+    padding: 10px 0; /* Adjust padding as needed */
+  }
+  .nav-menu {
+    margin-left: auto; /* Move the menu items to the right */
+  }

@@ -131,3 +131,29 @@ h3 {
   font-size: 1.5rem; /* Font size for the slogan */
   font-style: italic; /* Italic style for the slogan */
 }
+/* comm.css */
+
+.home-container {
+  display: flex;
+  justify-content: space-between; /* Align items with space between */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 10px; /* Add spacing between menu items */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.home-title {
+  margin-right: 10px; /* Add spacing between title and navigation */
+}
