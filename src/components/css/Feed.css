@@ -1,0 +1,166 @@
+.feed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.create-post-container {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    border-radius: .4rem;
+    width: 70%;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.image-upload>input, .video-upload>input {
+    display: none;
+}
+
+.fi-rs-graphic-style, .fi-rs-play-alt {
+    font-size: 1.5rem;
+    color: #175295;
+    cursor: pointer;
+}
+
+.fi-rs-graphic-style:hover, .fi-rs-play-alt:hover {
+    color:#1c78e2;
+    transition: 0.2s ease-in;
+}
+
+.create-post-buttons {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: space-between;
+}
+
+.post-button {
+    background-color: #175295;
+    color: #f1f1f1;
+    font-weight: bold;
+    border: none;
+    width: 20rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    padding: .7rem;
+}
+
+.post-button:hover {
+    background-color: #0b2d54;
+    transition: 0.2s ease;
+}
+
+.file-input-buttons {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.view-post-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    background-color: #e7e8ea;
+    border-radius: .4rem;
+    width: 70%;
+    padding: 1rem;
+}
+
+.post-card {
+    padding: 1rem;
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: .4rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease-in;
+}
+
+.post-user {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.user-details {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.user-content,
+.post-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: .7rem;
+}
+
+#post-profile-picture {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.dropdown-btn {
+    border: none;
+    align-self: self-start;
+    justify-self: flex-end;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.dropdown-btn:focus {
+    outline: none;
+}
+
+.dropdown-item {
+    cursor: pointer;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.dropdown-item:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+.fi-rr-trash, .delete-dropdown {
+    color: red;
+}
+
+.fi-rr-edit, .edit-dropdown {
+    color: #0E4C94;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.update-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.update-form-buttons {
+    display: flex;
+    column-gap: 1rem;
+}
