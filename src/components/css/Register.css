@@ -1,0 +1,54 @@
+.rg-container {
+    display: flex;
+    column-gap: 15rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.register-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.register-title {
+    text-align: center;
+}
+
+#rg-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0E4C94;
+    color: #f1f1f1;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#rg-btn:hover {
+    background-color: #0b305a;
+    transition: 0.2s ease-in;
+}
+
+.img-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+
+#dp-preview {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#small-login-btn:hover {
+    text-decoration: none;
+}
