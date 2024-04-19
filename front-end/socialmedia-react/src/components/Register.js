@@ -21,6 +21,8 @@ function Register() {
 
   const [imageUpload, setImageUpload] = useState(null)
   const [imagePreview, setImagePreview] = useState('')
+  const [errorMessage, setErrorMessage] = useState('');
+  const [emailErrorMessage, setEmailErrorMessage] = useState('');
 
   // Handle Image Upload
   const handleImageUpload = (e) => {
@@ -77,15 +79,20 @@ function Register() {
   // Handling User Creation
   const handleUserCreation = (imageURL) => {
     const newUser = { ...user, profile_picture: imageURL };
-    axios.post('http://localhost:8081/createuse\r', newUser)
+    axios.post('http://localhost:8081/createuser', newUser)
       .then((response) => {
         setUser({ ...user, first_name: '', last_name: '', username: '', email: '', gender: '', password: '' });
         navigate('/login')
       })
       .catch((error) => {
         console.error("Error creating user: ", error);
-      })
-  }
+        if (error.response && error.response.status === 400) {
+          setErrorMessage(error.response.data); // Set error message from backend
+        }else if (error.response && error.response.status === 400) {
+          setErrorMessage(error.response.data);
+        }
+      });
+  };
 
   return (
     <div className='rg-container'>
@@ -120,10 +127,12 @@ function Register() {
           <div className='form-group'>
             <input type='text' name='username' onChange={handleChange} value={user.username} className='form-control' placeholder='Username' required />
           </div>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
 
           <div className='form-group'>
             <input type='text' name='email' onChange={handleChange} value={user.email} className='form-control' placeholder='Email' required />
           </div>
+          {/* {emailErrorMessage && <p className="error-message">{emailErrorMessage}</p>} */}
 
           <div className='form-group'>
             <select className="custom-select" name='gender' onChange={handleChange} value={user.gender}>

@@ -274,8 +274,9 @@ function Feed() {
                   <div className='user-details'>
                     <b>{post.user.first_name} {post.user.last_name}</b>
                     <Link to={`/profile/${post.user.username}`}>
-                      <span>@{post.user.username}</span>
+                      <span>@{post.user.username} | </span>
                     </Link>
+                    <b>{post.user.gender}</b>
                   </div>
                   <div className='post-content'>
                     {
