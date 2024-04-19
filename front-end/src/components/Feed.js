@@ -26,39 +26,40 @@ function Feed() {
   }
 
   // Handling of Video and Image Upload
-  const [imageUpload, setImageUpload] = useState(null);
-  const [videoUpload, setVideoUpload] = useState(null);
-  const [mediaPreview, setMediaPreview] = useState('');
+  // const [imageUpload, setImageUpload] = useState(null);
+  // const [videoUpload, setVideoUpload] = useState(null);
+  // const [mediaPreview, setMediaPreview] = useState('');
+  const [imageUpload, setImageUpload] = useState([]);
+  const [videoUpload, setVideoUpload] = useState([]);
+  const [mediaPreview, setMediaPreview] = useState([]);
+
 
   const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    setImageUpload(file);
-    previewFile(file);
-  }
+    const files = e.target.files;
+    const fileArray = Array.from(files);
+    setImageUpload(fileArray);
+    previewFiles(fileArray);
+  };
 
   const handleVideoUpload = (e) => {
-    const file = e.target.files[0];
-    setVideoUpload(file);
-    previewFile(file);
-  }
-
-  const previewFile = (file) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      setMediaPreview(reader.result);
-    };
-    if (file) {
-      if (file.type.includes("image")) {
-        reader.readAsDataURL(file);
-        setPost({ ...post, media: "image" });
-      } else if (file.type.includes("video")) {
-        reader.readAsDataURL(file);
-        setPost({ ...post, media: "video" });
-      } else {
-        setPost({ ...post, media: null });
-      }
-    }
+    const files = e.target.files;
+    const fileArray = Array.from(files);
+    setVideoUpload(fileArray);
+    previewFiles(fileArray);
   };
+
+  const previewFiles = (files) => {
+    const previewArray = [];
+    files.forEach((file) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        previewArray.push(reader.result);
+        setMediaPreview([...previewArray]);
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
 
   const uploadImage = () => {
     if (imageUpload == null) return;
@@ -97,6 +98,41 @@ function Feed() {
         console.error("Error uploading media: ", error);
       });
   }
+  const uploadImages = () => {
+    if (imageUpload.length === 0) return;
+
+    const promises = imageUpload.map((file) => {
+      const imageRef = ref(storage, `post-images/${file.name + v4()}`);
+      return uploadBytes(imageRef, file)
+        .then(() => getDownloadURL(imageRef))
+        .catch((error) => console.error("Error uploading media: ", error));
+    });
+
+    Promise.all(promises)
+      .then((urls) => {
+        urls.forEach((url) => handlePostCreation(url));
+        setImageUpload([]);
+      })
+      .catch((error) => console.error("Error retrieving download URLs: ", error));
+  };
+
+  const uploadVideos = () => {
+    if (videoUpload.length === 0) return;
+
+    const promises = videoUpload.map((file) => {
+      const videoRef = ref(storage, `post-videos/${file.name + v4()}`);
+      return uploadBytes(videoRef, file)
+        .then(() => getDownloadURL(videoRef))
+        .catch((error) => console.error("Error uploading media: ", error));
+    });
+
+    Promise.all(promises)
+      .then((urls) => {
+        urls.forEach((url) => handlePostCreation(url));
+        setVideoUpload([]);
+      })
+      .catch((error) => console.error("Error retrieving download URLs: ", error));
+  };
 
   // Creation of Post
   const [post, setPost] = useState({
@@ -113,15 +149,16 @@ function Feed() {
 
   const handlePostSubmit = (e) => {
     e.preventDefault();
-    if (imageUpload) {
-      uploadImage();
-    } else if (videoUpload) {
-      uploadVideo();
+    if (imageUpload.length > 0) {
+      uploadImages();
+    } else if (videoUpload.length > 0) {
+      uploadVideos();
     } else {
       handlePostCreation(null);
     }
-    setMediaPreview('');
-  }
+    setMediaPreview([]);
+  };
+
 
   const handlePostCreation = (mediaURL) => {
     let newPost = { ...post };
@@ -227,15 +264,19 @@ function Feed() {
           <div className='form-group'>
             <textarea className='form-control' placeholder='Create a new post!' name='content' value={post.content} onChange={handlePostChange} rows={'4'} style={{ 'border': 'none' }} />
             <div className='media-preview'>
-              {mediaPreview && (
-                <div>
-                  {mediaPreview.startsWith("data:image") ? (
-                    <img src={mediaPreview} width={'300px'} className='img-preview' />
-                  ) : (
-                    <video src={mediaPreview} width={'300px'} className='img-preview' controls />
+              {mediaPreview && mediaPreview.map((preview, index) => (
+                <div key={index}>
+                  {typeof preview === 'string' && (
+                    preview.startsWith("data:image") ? (
+                      <img src={preview} width={'300px'} className='img-preview' />
+                    ) : (
+                      <video src={preview} width={'300px'} className='img-preview' controls />
+                    )
                   )}
                 </div>
-              )}
+              ))}
+
+
             </div>
             <div className='create-post-buttons'>
               <div className='file-input-buttons'>
