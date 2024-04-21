@@ -20,9 +20,13 @@ CampusConnect is a purpose-built social media application specifically designed 
 - **Authentication:** JSON Web Tokens (JWT)
 
 ## Installation and Setup
-1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the project directory: `cd CampusConnect`
-3. Install dependencies: `mvn clean install`
-4. Start the Spring Boot application: `mvn spring-boot:run`
-5. Access the application at `http://localhost:8080` in your web browser.
+1. Clone the repository: `git clone https://github.com/AkshunChauhan/CampusConnect.git`
+2. Navigate to the project directory: `cd Front-end`
+3. Install dependencies: `npm install`
+4. Navigate to the project backend: `cd..`, `cd Back-end`
+5. Update application.properties: `mysql username and password`
+6. To create database uncomment this line in application.properties: `spring.jpa.hibernate.ddl-auto = create-drop`
+7. Start the Spring Boot application: `spring-boot:run`
+8. Access the application at `http://localhost:8081` in your web browser.
 
+##Dont forget to give it a star.
