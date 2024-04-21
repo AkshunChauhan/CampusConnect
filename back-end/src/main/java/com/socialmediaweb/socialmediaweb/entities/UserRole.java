@@ -12,6 +12,7 @@ public class UserRole {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int user_role_id;
+<<<<<<< HEAD
 	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
@@ -25,6 +26,25 @@ public class UserRole {
 		
 	}
 	
+=======
+
+	// Many-to-one relationship with Users entity
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private Users user;
+
+	// Many-to-one relationship with Role entity
+	@ManyToOne
+	@JoinColumn(name = "role_id")
+	private Role role;
+
+	// Default constructor
+	public UserRole() {
+
+	}
+
+	// Parameterized constructor
+>>>>>>> 23bacc147fe614924e1f9a08f86a3c6f75ecb48e
 	public UserRole(int user_role_id, Users user, Role role) {
 		super();
 		this.user_role_id = user_role_id;
@@ -32,6 +52,10 @@ public class UserRole {
 		this.role = role;
 	}
 
+<<<<<<< HEAD
+=======
+	// Getters and setters
+>>>>>>> 23bacc147fe614924e1f9a08f86a3c6f75ecb48e
 	public int getUser_role_id() {
 		return user_role_id;
 	}
@@ -54,6 +78,10 @@ public class UserRole {
 
 	public void setRole(Role role) {
 		this.role = role;
+<<<<<<< HEAD
 	}	
+=======
+	}
+>>>>>>> 23bacc147fe614924e1f9a08f86a3c6f75ecb48e
 
 }

@@ -47,7 +47,11 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> 23bacc147fe614924e1f9a08f86a3c6f75ecb48e
 		<dependency>
 	        <groupId>mysql</groupId>
 	        <artifactId>mysql-connector-java</artifactId>
