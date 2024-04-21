@@ -24,7 +24,13 @@ import com.socialmediaweb.socialmediaweb.service.AuthenticationService;
 public class UserController {
 	@Autowired
 	AuthenticationService service;
-	
+
+
+    public UserController(AuthenticationService authService) {
+			this.service = authService;
+		}
+
+
 	@PostMapping("/createuser")
 	public ResponseEntity<String> createUser(@RequestBody Users user) {
 		boolean isUsernameExists = service.isUsernameExists(user.getUsername());

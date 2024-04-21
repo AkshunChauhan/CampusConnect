@@ -49,7 +49,10 @@ public class Users {
 		this.isAdmin = isAdmin;
 	}
 
-	public int getUser_id() {
+    public Users(String testUser, String mail, String password) {
+    }
+
+    public int getUser_id() {
 		return user_id;
 	}
 
