@@ -24,18 +24,19 @@ public class Users {
 	private String profile_picture;
 	private Date created_on;
 	private boolean isAdmin;
-	
+
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Post> posts;
-	
-	
+
+	// Default constructor
 	public Users() {
 		// By default user is not an Admin
 		this.isAdmin = false;
 	}
-	
+
+	// Parameterized constructor
 	public Users(int user_id, String username, String first_name, String last_name, String email, String password,
-			String gender, String profile_picture, Date created_on, boolean isAdmin) {
+				 String gender, String profile_picture, Date created_on, boolean isAdmin) {
 		super();
 		this.user_id = user_id;
 		this.username = username;
@@ -49,10 +50,12 @@ public class Users {
 		this.isAdmin = isAdmin;
 	}
 
-    public Users(String testUser, String mail, String password) {
-    }
+	// Convenience constructor for testing purposes
+	public Users(String testUser, String mail, String password) {
+	}
 
-    public int getUser_id() {
+	// Getters and setters
+	public int getUser_id() {
 		return user_id;
 	}
 
@@ -132,11 +135,12 @@ public class Users {
 		this.isAdmin = isAdmin;
 	}
 
+	// Override toString() method for debugging/logging
 	@Override
 	public String toString() {
 		return "Users [user_id=" + user_id + ", username=" + username + ", first_name=" + first_name + ", last_name="
 				+ last_name + ", email=" + email + ", password=" + password + ", gender=" + gender
 				+ ", profile_picture=" + profile_picture + ", created_on=" + created_on + ", isAdmin=" + isAdmin + "]";
 	}
-	
+
 }

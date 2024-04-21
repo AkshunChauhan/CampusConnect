@@ -25,12 +25,12 @@ public class UserController {
 	@Autowired
 	AuthenticationService service;
 
-
+	// Constructor injection for AuthenticationService
     public UserController(AuthenticationService authService) {
 			this.service = authService;
 		}
 
-
+	// Endpoint to create a user
 	@PostMapping("/createuser")
 	public ResponseEntity<String> createUser(@RequestBody Users user) {
 		boolean isUsernameExists = service.isUsernameExists(user.getUsername());
@@ -42,21 +42,24 @@ public class UserController {
 		if (isEmailExists) {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Email is already in use.");
 		}
-		
+		// Save the user if username and email are unique
 		service.saveUser(user);
 		return ResponseEntity.ok("User has registered successfully!");
-	} 
-	
+	}
+
+	// Endpoint to create multiple users
 	@PostMapping("/createusers")
 	public List<Users> createUsers(@RequestBody List<Users> users) {
 		return service.saveUsers(users);
 	}
-	
+
+	// Endpoint to get all users
 	@GetMapping("/users")
 	public List<Users> getUsers() {
 		return service.getUsers();
 	}
-	
+
+	// Endpoint to find a user by username
 	@GetMapping("/users/search/{username}")
 	public ResponseEntity<?> findUserByUsername(@PathVariable("username") String username) {
 	    Users user = service.findByUsername(username);
@@ -67,24 +70,27 @@ public class UserController {
 	    
 	    return new ResponseEntity<>(user, HttpStatus.OK);
 	}
-	
+
+	// Endpoint to autocomplete usernames based on a search term
 	@GetMapping("/users/autocomplete/{searchTerm}")
 	public List<String> autocompleteUsernames(@PathVariable("searchTerm") String searchTerm) {
 	    return service.findUsernamesBySearchTerm(searchTerm);
 	}
 
 
-	
+	// Endpoint to update a user
 	@PutMapping("/updateuser")
 	public Users updateUser(@RequestBody Users user) {
 		return service.updateUser(user);
 	}
-	
+
+	// Endpoint to delete a user by ID
 	@DeleteMapping("/deleteuser/{user_id}")
 	public String deleteUser(@PathVariable("user_id") Integer user_id) {
 		return service.deleteUser(user_id);
 	}
-	
+
+	// Endpoint for user login
 	@PostMapping("/login")
 	public ResponseEntity<Users> login(@RequestParam("username") String username, @RequestParam("password") String password) {
 	    Users user = service.authenticateUser(username, password);
