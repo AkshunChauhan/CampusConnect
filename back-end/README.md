@@ -1,1 +1,0 @@
-Echotopia is a social media web application built using the Spring Boot framework for the backend, MySQL as the database, and React for the frontend. It aims to provide users with a platform to connect and interact with each other by sharing posts, photos, and videos.
