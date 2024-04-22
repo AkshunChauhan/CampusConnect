@@ -10,7 +10,7 @@ function Admin() {
     const loggedInUser = JSON.parse(localStorage.getItem('user'));
     const loadUsers = async () => {
         try {
-            const response = await axios.get("http://localhost:8081/users");
+            const response = await axios.get("http://localhost:8080/users");
             const formattedUsers = response.data.map(user => ({
                 ...user, created_on: moment(user.created_on).format('DD MMMM YYYY')
             }));
@@ -23,7 +23,7 @@ function Admin() {
     const [posts, setPosts] = useState([]);
     const loadPosts = async () => {
         try {
-            const response = await axios.get("http://localhost:8081/feed");
+            const response = await axios.get("http://localhost:8080/feed");
             const formattedPosts = response.data.map(post => ({
                 ...post, created_on: moment(post.created_on).format('DD MMMM YYYY')
             }));
@@ -37,7 +37,7 @@ function Admin() {
 
     // Delete Post Function
     const handleDeletePostClick = (postId) => {
-        axios.delete(`http://localhost:8081/deletepost/${postId}`)
+        axios.delete(`http://localhost:8080/deletepost/${postId}`)
             .then(response => {
                 console.log('Post deleted:', response.data);
                 loadPosts();
@@ -49,7 +49,7 @@ function Admin() {
 
     // Delete User Function
     const handleDeleteUserClick = (userId) => {
-        axios.delete(`http://localhost:8081/deleteuser/${userId}`)
+        axios.delete(`http://localhost:8080/deleteuser/${userId}`)
             .then(response => {
                 console.log('User deleted:', response.data);
                 loadUsers();
@@ -99,7 +99,7 @@ function Admin() {
     const handleUserUpdateSubmit = (e) => {
         console.log(updatedUser);
         e.preventDefault();
-        axios.put("http://localhost:8081/updateuser", updatedUser)
+        axios.put("http://localhost:8080/updateuser", updatedUser)
             .then((response) => {
                 setUpdatedUser(response.data);
                 loadUsers();
@@ -136,7 +136,7 @@ function Admin() {
     const handlePostUpdateSubmit = (e) => {
         console.log(updatedPost);
         e.preventDefault();
-        axios.put("http://localhost:8081/updatepost", updatedPost)
+        axios.put("http://localhost:8080/updatepost", updatedPost)
             .then((response) => {
                 setUpdatedPost(response.data);
                 loadPosts();

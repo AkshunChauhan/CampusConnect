@@ -24,33 +24,19 @@ public class Users {
 	private String profile_picture;
 	private Date created_on;
 	private boolean isAdmin;
-<<<<<<< HEAD
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Post> posts;
-	
-	
-=======
 
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Post> posts;
 
 	// Default constructor
->>>>>>> 23bacc147fe614924e1f9a08f86a3c6f75ecb48e
 	public Users() {
 		// By default user is not an Admin
 		this.isAdmin = false;
 	}
-<<<<<<< HEAD
-	
-	public Users(int user_id, String username, String first_name, String last_name, String email, String password,
-			String gender, String profile_picture, Date created_on, boolean isAdmin) {
-=======
 
 	// Parameterized constructor
 	public Users(int user_id, String username, String first_name, String last_name, String email, String password,
 				 String gender, String profile_picture, Date created_on, boolean isAdmin) {
->>>>>>> 23bacc147fe614924e1f9a08f86a3c6f75ecb48e
 		super();
 		this.user_id = user_id;
 		this.username = username;
@@ -64,19 +50,12 @@ public class Users {
 		this.isAdmin = isAdmin;
 	}
 
-<<<<<<< HEAD
-    public Users(String testUser, String mail, String password) {
-    }
-
-    public int getUser_id() {
-=======
 	// Convenience constructor for testing purposes
 	public Users(String testUser, String mail, String password) {
 	}
 
 	// Getters and setters
 	public int getUser_id() {
->>>>>>> 23bacc147fe614924e1f9a08f86a3c6f75ecb48e
 		return user_id;
 	}
 
@@ -156,19 +135,12 @@ public class Users {
 		this.isAdmin = isAdmin;
 	}
 
-<<<<<<< HEAD
-=======
 	// Override toString() method for debugging/logging
->>>>>>> 23bacc147fe614924e1f9a08f86a3c6f75ecb48e
 	@Override
 	public String toString() {
 		return "Users [user_id=" + user_id + ", username=" + username + ", first_name=" + first_name + ", last_name="
 				+ last_name + ", email=" + email + ", password=" + password + ", gender=" + gender
 				+ ", profile_picture=" + profile_picture + ", created_on=" + created_on + ", isAdmin=" + isAdmin + "]";
 	}
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> 23bacc147fe614924e1f9a08f86a3c6f75ecb48e
 }

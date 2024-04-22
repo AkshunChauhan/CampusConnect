@@ -18,7 +18,7 @@ function Profile() {
   // Fetch user data based on the username
   const fetchUserData = async () => {
     try {
-      const response = await axios.get(`http://localhost:8081/users/search/${username}`);
+      const response = await axios.get(`http://localhost:8080/users/search/${username}`);
       setUser(response.data);
       loadFeed(response.data.user_id); // Pass the user_id to loadFeed
     } catch (error) {
@@ -29,7 +29,7 @@ function Profile() {
   // Retrieve Posts 
   const loadFeed = async (userId) => { // Take userId as a parameter
     try {
-      let response = await axios.get("http://localhost:8081/feed");
+      let response = await axios.get("http://localhost:8080/feed");
       const sortedFeed = response.data.sort((a, b) => b.post_id - a.post_id);
       const userPosts = sortedFeed.filter((post) => post.user.user_id === userId); // Use the passed userId
       setFeed(userPosts);
