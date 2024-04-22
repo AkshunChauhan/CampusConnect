@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="811be53b-129c-462d-80ba-94022a873632" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/public/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/assets/Campus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/assets/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/assets/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/assets/placeholder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/assets/register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/Admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/Feed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/LandingPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/Navbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/Profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/Register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/Users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/css/Admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/css/Feed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/css/LandingPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/css/Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/css/Navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/css/Profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/components/css/Register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/firebase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/front-end/src/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/public/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/assets/echotopia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/assets/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/assets/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/assets/placeholder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/assets/register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/Admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/Feed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/LandingPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/Navbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/Profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/Register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/Users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/css/Admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/css/Feed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/css/LandingPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/css/Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/css/Navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/css/Profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/components/css/Register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/firebase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/frontend/socialmedia-react/src/style.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2fR4BaqUWQ2qnvSujV47tYlhpsS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/akshun chauhan/Desktop/main"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="811be53b-129c-462d-80ba-94022a873632" name="Changes" comment="" />
+      <created>1713750421669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713750421669</updated>
+    </task>
+    <servers />
+  </component>
+</project>
